@@ -47,14 +47,7 @@ module PogoScript
     def compile(script, options = {})
       script = script.read if script.respond_to?(:read)
 
-      if options.key?(:bare)
-      elsif options.key?(:no_wrap)
-        options[:bare] = options[:no_wrap]
-      else
-        options[:bare] = false
-      end
-
-      Source.context.call("pogoscript.compile", script, options)
+      Source.context.call("pogoscript.compile", script, { :ugly => true })
     end
   end
 end
