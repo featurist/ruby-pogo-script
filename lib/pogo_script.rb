@@ -47,7 +47,10 @@ module PogoScript
     def compile(script, options = {})
       script = script.read if script.respond_to?(:read)
 
-      Source.context.call("pogoscript.compile", script, { :ugly => true })
+      Source.context.call("pogoscript.compile", script, {
+        :ugly => true,
+        :inScope => !options[:bare]
+      }.merge(options))
     end
   end
 end

@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name      = 'pogo-script'
-  s.version   = '0.0.1'
+  s.version   = '0.0.2'
   s.date      = '2013-03-03'
 
   s.homepage    = "http://github.com/featurist/ruby-pogo-script"
