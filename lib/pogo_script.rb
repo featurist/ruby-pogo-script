@@ -1,13 +1,13 @@
 require 'execjs'
-require 'coffee_script/source'
+require 'pogo_script/source'
 
-module CoffeeScript
+module PogoScript
   EngineError      = ExecJS::RuntimeError
   CompilationError = ExecJS::ProgramError
 
   module Source
     def self.path
-      @path ||= ENV['COFFEESCRIPT_SOURCE_PATH'] || bundled_path
+      @path ||= ENV['POGOSCRIPT_SOURCE_PATH'] || bundled_path
     end
 
     def self.path=(path)
@@ -20,7 +20,7 @@ module CoffeeScript
     end
 
     def self.version
-      @version ||= contents[/CoffeeScript Compiler v([\d.]+)/, 1]
+      @version ||= contents[/PogoScript Compiler v([\d.]+)/, 1]
     end
 
     def self.bare_option
@@ -54,7 +54,7 @@ module CoffeeScript
         options[:bare] = false
       end
 
-      Source.context.call("CoffeeScript.compile", script, options)
+      Source.context.call("pogoscript.compile", script, options)
     end
   end
 end

@@ -1,35 +1,32 @@
-Ruby CoffeeScript
+Ruby PogoScript
 =================
 
-Ruby CoffeeScript is a bridge to the official CoffeeScript compiler.
+Ruby PogoScript is a bridge to the official PogoScript compiler.
 
-    CoffeeScript.compile File.read("script.coffee")
+    PogoScript.compile File.read("script.pogo")
 
 
 Installation
 ------------
 
-    gem install coffee-script
-
-*Note: This compiler library has replaced the original CoffeeScript
- compiler that was written in Ruby.*
+    gem install pogo-script
 
 
 Dependencies
 ------------
 
-This library depends on the `coffee-script-source` gem which is
-updated any time a new version of CoffeeScript is released. (The
-`coffee-script-source` gem's version number is synced with each
-official CoffeeScript release.) This way you can build against
-different versions of CoffeeScript by requiring the correct version of
-the `coffee-script-source` gem.
+This library depends on the `pogo-script-source` gem which is
+updated any time a new version of PogoScript is released. (The
+`pogo-script-source` gem's version number is synced with each
+official PogoScript release.) This way you can build against
+different versions of PogoScript by requiring the correct version of
+the `pogo-script-source` gem.
 
 In addition, you can use this library with unreleased versions of
-CoffeeScript by setting the `COFFEESCRIPT_SOURCE_PATH` environment
+PogoScript by setting the `POGOSCRIPT_SOURCE_PATH` environment
 variable:
 
-    export COFFEESCRIPT_SOURCE_PATH=/path/to/coffee-script/extras/coffee-script.js
+    export POGOSCRIPT_SOURCE_PATH=/path/to/pogo-script/extras/pogo-script.js
 
 ### JSON
 
